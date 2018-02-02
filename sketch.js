@@ -56,3 +56,15 @@ for (var i = 1; i <= 48; i++) {
   img.style.transform = 'rotate('+randint(-10, 10)+'deg) scale('+(Math.random()+0.4) +')';
   container.appendChild(img);
 }
+
+let cats = Array.from(document.querySelectorAll('#cats img'));
+cats.forEach((c) => {
+  c.style.display = 'none';
+  setTimeout(() => {
+    c.style.display = 'block';
+    c.classList.add('cat');
+  }, randint(1000, 10000));
+  // c.style.left = randint(0, 10) + '%';
+  // c.style.top = randint(0, 10) + '%';
+  c.style.width = randint(100, 200) + 'px';
+});
