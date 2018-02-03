@@ -16,10 +16,7 @@ function makeRandomAnimation(imgsrc) {
   let container = document.createElement('div');
   container.classList.add('leak');
 
-  // let images = ['ant/CANDYGRAM.jpg1516305882.gif.temp.gif'];
-  // let image = choose(images);
   let imgEl = document.createElement('img');
-  // imgEl.style.position = 'static';
   imgEl.addEventListener('load', function() {
     container.style.width = imgEl.width + 'px';
     container.style.height = imgEl.height + 'px';
@@ -32,7 +29,6 @@ function makeRandomAnimation(imgsrc) {
 
   container.style.backgroundImage = 'url(' + backgroundGif + ')';
   container.style.backgroundSize = randint(1, 100) + '%';
-  // container.appendChild(makeImage(image));
 
   for (let i = 0; i < randint(2, 3); i++) {
     let src = 'gifs/' + randint(1, 252) + '.gif';
@@ -40,8 +36,6 @@ function makeRandomAnimation(imgsrc) {
     img.style.width = randint(100, 500) + 'px';
     img.style.left = randint(0, 90) + '%';
     img.style.top = randint(0, 90) + '%';
-    // img.style.left = randint(0, container.offsetWidth - img.width) + 'px';
-    // img.style.top = randint(0, container.offsetHeight - img.height) + 'px';
     container.appendChild(img);
   }
 
@@ -51,8 +45,6 @@ function makeRandomAnimation(imgsrc) {
 for (var i = 1; i <= 48; i++) {
   let container = document.querySelector('#container');
   let img = makeRandomAnimation('ant/' + i + '.gif');
-  // img.style.top = randint(-1000, window.innerHeight) + 'px';
-  // img.style.left = randint(-1000, window.innerWidth) + 'px';
   img.style.transform = 'rotate('+randint(-10, 10)+'deg) scale('+(Math.random()+0.4) +')';
   container.appendChild(img);
 }
@@ -61,10 +53,8 @@ let cats = Array.from(document.querySelectorAll('#cats img'));
 cats.forEach((c) => {
   c.style.display = 'none';
   setTimeout(() => {
+    c.style.width = randint(100, 200) + 'px';
     c.style.display = 'block';
     c.classList.add('cat');
   }, randint(1000, 10000));
-  // c.style.left = randint(0, 10) + '%';
-  // c.style.top = randint(0, 10) + '%';
-  c.style.width = randint(100, 200) + 'px';
 });
