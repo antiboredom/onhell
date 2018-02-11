@@ -58,3 +58,7 @@ cats.forEach((c) => {
     c.classList.add('cat');
   }, randint(1000, 10000));
 });
+
+if (Math.random() > 0.9) {
+  document.querySelector('#hedvalink').href = 'https://www.google.com/search?num=20&safe=off&sa=G&hl=en&tbs=simg:CAEStAIJ4uIX3ri2anUaqAILEKjU2AQaBgg9CEIIFQwLELCMpwgaYgpgCAMSKM8a3RruGs0ayhqbD-QE5QSRHM4a6SS8L7Yvvi_1rJL0vqiXqJI87vy8aMC5PQKiDlt8sSpQF1dR_1tfTtt3E3WnQEqsYQOGZS8smOVNwuetk6c2rZBKmSO7-JgCAEDAsQjq7-CBoKCggIARIEks_1hmAwLEJ3twQkakQEKGQoGZ2FybW9u2qWI9gMLCgkvbS8wNGg0cXcKHAoJZ2VudGxlbWFu2qWI9gMLCgkvbS8wMTlwNXEKFgoDdGll2qWI9gMLCgkvbS8wMXJrYnIKGwoIc25hcHNob3TapYj2AwsKCS9tLzA2cGcyMgohCg9wdWJsaWMgc3BlYWtpbmfapYj2AwoKCC9tLzA2OGs0DA&q=rick+astley&tbm=isch&ved=0ahUKEwikmf6Lz57ZAhVDs1kKHV6rBcUQsw4IOg&biw=1436&bih=759&dpr=2';
+}
